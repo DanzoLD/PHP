@@ -1,0 +1,38 @@
+
+$background-color : linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(2,2,241,1) 35%, rgba(0,212,255,1) 100%);
+
+:root {
+    --red-color: #Ff0000;
+}
+
+html {
+    background: var(--red-color);
+    background:$background-color;
+    height: 100vh;
+}
+
+body {
+    background: var(--red-color);
+    background:$background-color;
+}
+
+
+@mixin HeaderBackground ($background_opacity: 0.8) {
+    background-color: rgba(220, 0, 0);
+    opacity : $background_opacity;
+}
+
+header nav {
+    @include HeaderBackground();
+
+    & ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+footer {
+    @include HeaderBackground($background_opacity: 1);
+}
